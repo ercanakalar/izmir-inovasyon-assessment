@@ -1,0 +1,64 @@
+.card-content {
+  position: relative;
+  /* left: 8%; */
+  padding: 15px 0 15px 0;
+  border: 2px solid #9da8c2;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.card-image {
+  position: relative;
+  width: 248px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.card-image-delete {
+  position: absolute;
+  top: 4%;
+  right: 4%;
+  background: #a6d4ff;
+  mix-blend-mode: normal;
+  opacity: 0.4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.card-details-container {
+  position: relative;
+  width: 248px;
+  height: 100px;
+  left: 0px;
+  left: 8%;
+  border-radius: 0px 0px 10px 10px;
+}
+.card-delete {
+  position: absolute;
+  border: none;
+  background: none;
+  cursor: pointer;
+  right: 0;
+  z-index: 1;
+}
+.card-details {
+  position: relative;
+  display: flex;
+}
+.card-name {
+  font-family: "Izmir";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+
+  color: #9da8c2;
+}
+.card-name-info {
+  font-family: "Izmir";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+
+  color: #75797d;
+}

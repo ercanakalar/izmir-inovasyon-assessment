@@ -1,0 +1,78 @@
+.card-send-checkbox {
+  position: relative;
+  top: 36px;
+  display: flex;
+  padding: -11px;
+  /* margin-top: -35px; */
+  left: 8px;
+}
+.card-send-checkbox-input {
+  position: absolute;
+  height: 25px;
+  left: 0;
+  top: 37%;
+  background-color: inherit;
+  border: 1.5px solid #9da8c2;
+  border-radius: 5px;
+  opacity: 0;
+}
+.card-send-checkbox-text {
+  position: relative;
+  left: 50px;
+
+  font-family: "Izmir";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 34px;
+
+  text-decoration-line: underline;
+  color: #9da8c3;
+}
+.script {
+  display: block;
+  position: relative;
+  margin-bottom: 35px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* creating a custom checkbox based on demand */
+.w3docs {
+  position: absolute;
+  height: 25px;
+  left: 0;
+  top: 37%;
+  width: 25px;
+  background-color: inherit;
+  border: 1.5px solid #9da8c2;
+  border-radius: 5px;
+}
+
+/* checkmark to be shown in checkbox */
+/* It is not be shown when not checked */
+.w3docs:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* display checkmark when checked */
+.script input:checked ~ .w3docs:after {
+  display: block;
+}
+/* styling the checkmark using webkit */
+/* creating a square to be the sign of checkmark */
+.script .w3docs:after {
+  left: 6px;
+  bottom: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #41cb83;
+}
+
+@media screen and (max-width: 600px) {
+  .card-send-checkbox {
+    position: relative;
+  }
+}

@@ -1,0 +1,40 @@
+.sidebarlink_button {
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  right: 10px;
+  width: 208px;
+  height: 40px;
+  background: inherit;
+  border: none;
+  cursor: pointer;
+}
+.sidebarlink_button:focus {
+  background: #0f172a;
+}
+.sidebarlink_button-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+}
+.sidebarlink_button-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+
+  color: #e2e8f0;
+}
+@media screen and (max-width: 600px) {
+  .sidebarlink_button {
+    right: 10px;
+    width: 150px;
+    height: 40px;
+  }
+}

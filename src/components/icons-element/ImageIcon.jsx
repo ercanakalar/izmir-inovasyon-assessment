@@ -1,0 +1,39 @@
+const ImageIcon = (props) => {
+  return (
+    <svg
+      width="52"
+      height="52"
+      viewBox="0 0 52 52"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M45.2698 1H7.15875C4.15186 1 1.71429 3.48731 1.71429 6.55556V45.4444C1.71429 48.5126 4.15186 51 7.15875 51H45.2698C48.2769 51 50.7143 48.5126 50.7143 45.4444V6.55556C50.7143 3.48731 48.2769 1 45.2698 1Z"
+        stroke="#9DA8C3"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M16.7143 20C18.9235 20 20.7143 18.2092 20.7143 16C20.7143 13.7909 18.9235 12 16.7143 12C14.5051 12 12.7143 13.7909 12.7143 16C12.7143 18.2092 14.5051 20 16.7143 20Z"
+        stroke="#9DA8C3"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M49.7143 34.0909L36.2769 20L6.71429 51"
+        stroke="#9DA8C3"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export default ImageIcon;

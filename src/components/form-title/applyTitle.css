@@ -1,0 +1,29 @@
+.title {
+  position: relative;
+  /* display: flex; */
+  /* text-align-last: center; */
+  top: 0;
+  width: 100%;
+  flex-direction: column;
+  /* left: 50%; */
+  /* justify-content: center; */
+  text-align-last: center;
+}
+.title-1 {
+  font-family: "Izmir";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 32px;
+
+  color: #4f4f4f;
+}
+.title-2 {
+  font-family: "Izmir";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+
+  color: #9da8c3;
+}

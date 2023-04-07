@@ -1,0 +1,84 @@
+.apply {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.citizen-inputs {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+.citizen-inputs-title-container {
+  right: 70px;
+  display: flex;
+  position: relative;
+}
+.citizen-inputs-title-name {
+  font-family: "Izmir";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+
+  color: #4f4f4f;
+}
+.input {
+  width: 300px;
+  height: 45px;
+  border: 2px solid #9da8c2;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+}
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* input:invalid {
+  border: 2px solid red;
+} */
+.checkbox-container {
+  position: relative;
+  left: -48px;
+  right: 6%;
+}
+.checkbox-input {
+}
+.apply-button {
+  position: relative;
+  display: flex;
+  top: 50px;
+  width: 300px;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  border: none;
+
+  background: #41cb83;
+  border-radius: 10px;
+}
+.apply-button-text {
+  font-family: "Izmir";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+
+  color: #ffffff;
+}
+@media screen and (max-width: 600px) {
+  .apply {
+    left: 0;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .apply {
+  }
+}

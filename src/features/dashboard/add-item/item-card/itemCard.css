@@ -1,0 +1,131 @@
+.item-card-container {
+  box-sizing: border-box;
+
+  position: relative;
+  width: 300px;
+  height: initial;
+  left: 3%;
+}
+.cards-scroll {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  height: 42vh;
+}
+.cards-scroll::-webkit-scrollbar {
+  left: 10px;
+  width: 6px;
+}
+.cards-scroll::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  visibility: hidden;
+  border-radius: 10px;
+}
+.cards-scroll::-webkit-scrollbar-thumb {
+  background: #41cb83;
+  border-radius: 3px;
+}
+
+.card-send {
+  position: absolute;
+  bottom: 0;
+}
+
+.card-buttons {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  top: 43px;
+}
+.card-button-1 {
+  position: relative;
+  width: 300px;
+  height: 45px;
+  background: #41cb83;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: none;
+  cursor: pointer;
+}
+.card-button-1-text {
+  position: relative;
+  bottom: 5px;
+
+  font-family: "Izmir";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+
+  color: #ffffff;
+}
+.card-button-2 {
+  position: relative;
+  width: 300px;
+  height: 45px;
+  border-radius: 10px;
+  border: 2px solid #41cb83;
+  border-radius: 10px;
+  background-color: inherit;
+  cursor: pointer;
+}
+.card-button-2-text {
+  position: relative;
+  bottom: 5px;
+
+  font-family: "Izmir";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+
+  color: #41cb83;
+}
+.no-content-container {
+  position: absolute;
+  border: 2px solid;
+  top: 22%;
+  height: 242px;
+  width: 300px;
+}
+.no-content-text {
+  position: relative;
+  height: 48px;
+  top: 81px;
+  width: 159px;
+  left: 25%;
+  font-family: "Izmir";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #9da8c2;
+  opacity: 0.3;
+}
+@media screen and (max-width: 600px) {
+  .item-card-container {
+    left: 0;
+    top: 70px;
+    width: 100%;
+    padding: 0 110px 0 110px;
+    margin-left: 10px;
+  }
+  .cards-scroll {
+    top: 84px;
+    position: relative;
+  }
+  .card-send {
+    position: relative;
+    bottom: 0;
+    top: 96px;
+  }
+  .card-scroll {
+    height: 68vh;
+  }
+  .no-content-container {
+    position: relative;
+    top: 80px;
+  }
+}

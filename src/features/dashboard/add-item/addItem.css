@@ -1,0 +1,153 @@
+.item-form {
+  position: relative;
+  top: 0;
+  width: 100%;
+  flex-direction: column;
+  text-align-last: center;
+}
+
+.itemForm-box-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+.item-divider {
+  position: relative;
+  display: flex;
+
+  border: 1px solid #e1e1e1;
+  top: 20px;
+}
+.add-item-form {
+  position: relative;
+  display: flex;
+  left: 14%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+  width: 50%;
+}
+.add-item-select {
+  display: flex;
+  flex-direction: column;
+}
+.upload {
+  font-size: 0px;
+  box-sizing: border-box;
+  color: transparent;
+  width: 300px;
+  height: 135px;
+  margin-bottom: 10px;
+  z-index: 20;
+  cursor: pointer;
+
+  border: 2px solid #9da8c2;
+  border-radius: 10px;
+}
+.upload::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.upload-text {
+  position: absolute;
+  width: max-content;
+  top: 77%;
+  right: -50%;
+  cursor: pointer;
+  z-index: 0;
+  font-family: "Izmir";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #9da8c3;
+}
+.upload-image {
+  background-image: url("../../../images/upload.png");
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  width: 52px;
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  height: 52px;
+  cursor: pointer;
+  z-index: 0;
+}
+
+.item-button {
+  position: relative;
+  display: flex;
+  top: 50px;
+  width: 300px;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  border: none;
+
+  background: #41cb83;
+  border-radius: 10px;
+}
+
+.item-button-text {
+  font-family: "Izmir";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+
+  color: #ffffff;
+}
+.tostify {
+  right: 0;
+  top: 0;
+  position: absolute;
+  height: 35px;
+  width: 120px;
+  background-color: #41cb83;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  animation-name: animation;
+  animation-duration: 4s;
+}
+@keyframes animation {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
+@media screen and (max-width: 600px) {
+  .itemForm-box-container {
+    display: inline;
+  }
+  .add-item-form {
+    left: 0;
+    width: 100%;
+    padding: 0;
+  }
+  .card-container {
+    left: 14%;
+    top: 70px;
+  }
+  .item-divider {
+    top: 100px;
+  }
+  .tostify {
+    position: relative;
+    left: 77%;
+    top: -387px;
+  }
+}

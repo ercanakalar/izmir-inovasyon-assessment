@@ -1,0 +1,26 @@
+.logo {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 91px;
+  padding-right: 91px;
+}
+.button-logo {
+  color: #41cb83;
+  font-family: "Inter";
+  font-weight: 900;
+  font-size: 64px;
+  font-style: normal;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: inherit;
+}
+@media screen and (max-width: 600px) {
+  .logo {
+    padding: 0;
+  }
+  .button-logo {
+    font-weight: 400;
+    font-size: 12px;
+  }
+}
