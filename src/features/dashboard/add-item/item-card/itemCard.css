@@ -4,12 +4,12 @@
   position: relative;
   width: 300px;
   left: 3%;
-  height: inherit;
 }
 .cards-scroll {
   overflow-y: scroll;
   scroll-behavior: smooth;
-  max-height: 32vh;
+  max-height: fit-content;
+  height: 50%;
 }
 .cards-scroll::-webkit-scrollbar {
   left: 10px;
@@ -27,7 +27,6 @@
 
 .card-send {
   position: absolute;
-  bottom: 0;
 }
 
 .card-buttons {
