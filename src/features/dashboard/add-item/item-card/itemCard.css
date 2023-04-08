@@ -4,7 +4,7 @@
   position: relative;
   width: 300px;
   left: 3%;
-  height: 50vh;
+  height: inherit;
 }
 .cards-scroll {
   overflow-y: scroll;
