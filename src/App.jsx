@@ -5,25 +5,12 @@ import AddItem from "./features/dashboard/add-item/AddItem";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<MainPage />} />
-      <Route
-        path="/dashboard"
-        element={
-          <MainPage>
-            <Apply />
-          </MainPage>
-        }
-      />
-      <Route
-        path="/dashboard/add-item"
-        element={
-          <MainPage>
-            <AddItem />
-          </MainPage>
-        }
-      />
-    </Routes>
+    <MainPage>
+      <Routes>
+        <Route path="/dashboard" element={<Apply />} />
+        <Route path="/dashboard/add-item" element={<AddItem />} />
+      </Routes>
+    </MainPage>
   );
 }
 
