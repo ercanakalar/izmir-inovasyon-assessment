@@ -17,8 +17,13 @@
     display: contents;
   }
 }
-@media screen and (min-width: 601px) and (max-width: 900px) {
+@media screen and (min-width: 600px) and (max-width: 640px) {
   .menu-sidebar {
-    display: flex;
+    display: inline;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 900px) {
+  .menu-sidebar {
+    display: inherit;
   }
 }

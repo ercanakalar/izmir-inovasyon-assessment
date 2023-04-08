@@ -1,8 +1,5 @@
 .logo {
-  padding-top: 1%;
-  padding-bottom: 1%;
-  padding-left: 91px;
-  padding-right: 91px;
+  padding: 1% 91px 1% 91px;
 }
 .button-logo {
   color: #41cb83;
@@ -20,7 +17,25 @@
     padding: 0;
   }
   .button-logo {
-    font-weight: 400;
+    font-weight: 900;
     font-size: 12px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .logo {
+    padding: 0 0 0 20px;
+  }
+  .button-logo {
+    font-weight: 900;
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1670px) {
+  .logo {
+    padding: 1% 0 1% 10px;
+  }
+  .button-logo {
+    font-weight: 900;
+    font-size: 34px;
   }
 }

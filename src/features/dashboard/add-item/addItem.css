@@ -151,3 +151,29 @@
     top: -387px;
   }
 }
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .itemForm-box-container {
+    display: inline;
+  }
+  .add-item-form {
+    width: 0;
+    left: 50%;
+  }
+  .item-divider {
+    top: 80px;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1024px) {
+  .itemForm-box-container {
+    display: inline;
+  }
+  .add-item-form {
+    width: 0;
+    left: 47%;
+    height: 35%;
+  }
+  .item-divider {
+    top: 120px;
+  }
+}

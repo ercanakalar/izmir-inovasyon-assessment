@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 38px 0 5px;
 }
 
 .buttons-icons {
@@ -12,11 +11,21 @@
   background: inherit;
 }
 @media screen and (max-width: 600px) {
-  .icon-container {
-    padding: 0;
-  }
   .icon {
     width: 12px;
+  }
+  .icons-1 {
+    display: flex;
+    padding: 0;
+  }
+  .icons-1:last-child {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .icon {
+    width: 18px;
+    height: 50px;
   }
   .icons-1 {
     display: flex;
