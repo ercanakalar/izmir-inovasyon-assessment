@@ -3,13 +3,13 @@
 
   position: relative;
   width: 300px;
-  height: initial;
   left: 3%;
+  height: 50vh;
 }
 .cards-scroll {
   overflow-y: scroll;
   scroll-behavior: smooth;
-  height: 42vh;
+  max-height: 32vh;
 }
 .cards-scroll::-webkit-scrollbar {
   left: 10px;

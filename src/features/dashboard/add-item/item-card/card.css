@@ -9,9 +9,10 @@
 
 .card-image {
   position: relative;
-  width: 248px;
+  max-width: 248px;
   border-radius: 10px;
   margin-bottom: 10px;
+  width: 100px;
 }
 .card-image-delete {
   position: absolute;
