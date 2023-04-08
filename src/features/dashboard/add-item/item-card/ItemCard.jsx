@@ -5,7 +5,7 @@ import Button from "../../../../components/button-element/Button";
 import Checkbox from "../../../../components/checkbox-element/Checkbox";
 
 const ItemCard = (props) => {
-  const { select, addItem, handleCheck, sendItemsClick } = props;
+  const { select, addItem, handleCheck, sendItemsClick, submitItems } = props;
 
   return (
     <div className="item-card-container">
@@ -16,7 +16,7 @@ const ItemCard = (props) => {
             <Card select={select} addItem={addItem} />
             <Card select={select} addItem={addItem} />
           </div>
-          <div className="card-send">
+          <form onSubmit={submitItems} className="card-send">
             <Checkbox
               handleCheck={handleCheck}
               text="Bağış Metni"
@@ -30,7 +30,7 @@ const ItemCard = (props) => {
                 <p className="card-button-2-text">Yeni Eşya Ekle</p>
               </Button>
             </div>
-          </div>
+          </form>
         </>
       ) : (
         <div className="no-content-container">

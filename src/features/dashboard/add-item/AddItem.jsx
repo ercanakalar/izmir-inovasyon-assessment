@@ -48,6 +48,10 @@ const AddItem = (props) => {
     setAddItem(true);
   };
 
+  const submitItems = (e) => {
+    e.preventDefault();
+  };
+
   const sendItemsClick = () => {
     if (check) {
       setSendItems(true);
@@ -69,6 +73,7 @@ const AddItem = (props) => {
           addItem={addItem}
           handleCheck={handleCheck}
           sendItemsClick={sendItemsClick}
+          submitItems={submitItems}
         />
       </div>
       {sendItems && <div className="tostify">Başarılı!</div>}
