@@ -32,6 +32,7 @@ const AddItem = (props) => {
   };
 
   const handleCheck = (e) => {
+    e.preventDefault();
     setCheck(!check);
   };
 
@@ -60,6 +61,16 @@ const AddItem = (props) => {
   const addItemClick = (e) => {
     e.preventDefault();
 
+    setSelect({
+      esyaTipi: "",
+      esyaTuru: "",
+      esyaDurumu: "",
+      img: "",
+      itemCount: "",
+      address: "",
+      phoneNumber: "",
+    });
+
     addItemPointer("item-form-condition", 1, "painted");
   };
 
@@ -78,6 +89,8 @@ const AddItem = (props) => {
     e.preventDefault();
     setSelect((prev) => ({ ...prev, img: "" }));
   };
+
+  console.log(select, "select");
 
   return (
     <>
@@ -98,6 +111,7 @@ const AddItem = (props) => {
             addItemClick={addItemClick}
             items={items}
             openPopup={closePopup}
+            check={check}
           />
         </div>
         {sendItems && <div className="tostify">Başarılı!</div>}
