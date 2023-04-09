@@ -8,7 +8,7 @@
   overflow-y: scroll;
   scroll-behavior: smooth;
   max-height: fit-content;
-  height: 50vh;
+  height: 80%;
   width: 300px;
 }
 .cards-scroll::-webkit-scrollbar {
