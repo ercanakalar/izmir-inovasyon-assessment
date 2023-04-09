@@ -9,7 +9,11 @@
   overflow-y: scroll;
   scroll-behavior: smooth;
   max-height: fit-content;
+<<<<<<< HEAD
   height: 85%;
+=======
+  height: 80%;
+>>>>>>> c0e5eee3639f87ea5d45c68f6c32c062e477fe27
   width: 300px;
 }
 .cards-scroll::-webkit-scrollbar {
