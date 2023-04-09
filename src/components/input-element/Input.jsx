@@ -7,8 +7,12 @@ const Input = (props) => {
     required,
     name,
     handleChange,
+    value,
+    min,
+    max,
     className,
   } = props;
+  console.log(value);
   return (
     <input
       id={id}
@@ -19,6 +23,8 @@ const Input = (props) => {
       className={className}
       accept={accept}
       required={required}
+      min={min}
+      max={max}
     />
   );
 };

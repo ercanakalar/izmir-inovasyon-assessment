@@ -6,6 +6,7 @@ import Button from "../../../components/button-element/Button";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Checkbox from "../../../components/checkbox-element/Checkbox";
+import date from "../../../utils/date";
 
 const CitizenApply = (props) => {
   const navigate = useNavigate();
@@ -37,6 +38,8 @@ const CitizenApply = (props) => {
     e.preventDefault();
     navigate("/dashboard/add-item");
   };
+
+  const today = date();
 
   return (
     <form onSubmit={handleSubmit} className="apply">
@@ -87,7 +90,8 @@ const CitizenApply = (props) => {
           name="day"
           onChange={handleChange}
           className="input"
-          value="2017-06-01"
+          value={today}
+          min={today}
           required
         />
       </div>

@@ -76,7 +76,7 @@ const AddItemForm = (props) => {
           required={true}
         />
         <Input
-          type="text"
+          type="tel"
           handleChange={handleChange}
           name="phoneNumber"
           placeholder="Telim Edecek Kişi Telefon No"
