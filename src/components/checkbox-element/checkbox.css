@@ -27,6 +27,7 @@
   line-height: 34px;
 
   text-decoration-line: underline;
+  cursor: pointer;
   color: #9da8c3;
 }
 .script {

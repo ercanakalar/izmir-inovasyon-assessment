@@ -20,5 +20,6 @@ const esyaTuru = [
 ];
 const esyaDurumu = ["Çalışır", "Çalışmaz"];
 const eşyaAdet = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const countries = ["Vatandaş", "Europe"];
 
-export { esyaTipi, esyaTuru, esyaDurumu, eşyaAdet, cardDetails };
+export { countries, esyaTipi, esyaTuru, esyaDurumu, eşyaAdet, cardDetails };

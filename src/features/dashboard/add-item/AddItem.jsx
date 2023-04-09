@@ -5,6 +5,7 @@ import AddItemForm from "./AddItemForm";
 import "./addItem.css";
 import ItemCard from "./item-card/ItemCard";
 import addItemPointer from "../../../utils/addItemPointer";
+import Popup from "../../../components/popup-element/Popup";
 
 const AddItem = (props) => {
   const [select, setSelect] = useState({
@@ -20,6 +21,15 @@ const AddItem = (props) => {
 
   const [check, setCheck] = useState(false);
   const [sendItems, setSendItems] = useState(false);
+  const [openPopup, setOpenPopup] = useState(false);
+
+  const closePopup = () => {
+    setOpenPopup(!openPopup);
+  };
+
+  const clickOpenPopup = () => {
+    return <Popup closePopup={closePopup} />;
+  };
 
   const handleCheck = (e) => {
     setCheck(!check);
@@ -70,26 +80,30 @@ const AddItem = (props) => {
   };
 
   return (
-    <div className="item-form">
-      <ApplyTitle />
-      <div className="itemForm-box-container">
-        <AddItemForm
-          select={select}
-          handleChange={handleChange}
-          handleSubmit={handleSubmit}
-          removeImage={removeImage}
-        />
-        <Divider className="item-divider" />
+    <>
+      <div className="item-form">
+        <ApplyTitle />
+        <div className="itemForm-box-container">
+          <AddItemForm
+            select={select}
+            handleChange={handleChange}
+            handleSubmit={handleSubmit}
+            removeImage={removeImage}
+          />
+          <Divider className="item-divider" />
 
-        <ItemCard
-          handleCheck={handleCheck}
-          submitItems={submitItems}
-          addItemClick={addItemClick}
-          items={items}
-        />
+          <ItemCard
+            handleCheck={handleCheck}
+            submitItems={submitItems}
+            addItemClick={addItemClick}
+            items={items}
+            openPopup={closePopup}
+          />
+        </div>
+        {sendItems && <div className="tostify">Başarılı!</div>}
       </div>
-      {sendItems && <div className="tostify">Başarılı!</div>}
-    </div>
+      {openPopup && clickOpenPopup()}
+    </>
   );
 };
 

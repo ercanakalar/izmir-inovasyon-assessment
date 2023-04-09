@@ -12,7 +12,6 @@ const Input = (props) => {
     max,
     className,
   } = props;
-  console.log(value);
   return (
     <input
       id={id}

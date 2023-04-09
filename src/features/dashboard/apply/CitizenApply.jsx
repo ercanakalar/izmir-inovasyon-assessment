@@ -7,8 +7,11 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Checkbox from "../../../components/checkbox-element/Checkbox";
 import date from "../../../utils/date";
+import { countries } from "../../../utils/options";
 
 const CitizenApply = (props) => {
+  const { openPopup } = props;
+
   const navigate = useNavigate();
 
   const [citizen, setCitizen] = useState({
@@ -20,7 +23,7 @@ const CitizenApply = (props) => {
     accept: false,
   });
 
-  const countries = ["Vatandaş", "Europe"];
+  const today = date();
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -38,8 +41,6 @@ const CitizenApply = (props) => {
     e.preventDefault();
     navigate("/dashboard/add-item");
   };
-
-  const today = date();
 
   return (
     <form onSubmit={handleSubmit} className="apply">
@@ -100,6 +101,7 @@ const CitizenApply = (props) => {
           name="accept"
           text="Kişisel verilerin korunması hakkında
 "
+          openPopup={openPopup}
           required
         />
       </div>

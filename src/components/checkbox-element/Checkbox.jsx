@@ -2,7 +2,7 @@ import "./checkbox.css";
 import Input from "../input-element/Input";
 
 const Checkbox = (props) => {
-  const { text, handleCheck, name, required } = props;
+  const { text, handleCheck, name, required, openPopup } = props;
   return (
     <div className="card-send-checkbox">
       <label className="script">
@@ -15,7 +15,9 @@ const Checkbox = (props) => {
         />
         <span className="w3docs"></span>
       </label>
-      <div className="card-send-checkbox-text">{text}</div>
+      <div onClick={openPopup} className="card-send-checkbox-text">
+        <span>{text}</span>
+      </div>
     </div>
   );
 };

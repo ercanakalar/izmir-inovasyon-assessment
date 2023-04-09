@@ -1,0 +1,13 @@
+.popup {
+  position: absolute;
+  display: flex;
+  height: -webkit-fill-available;
+  width: inherit;
+}
+.popup-delete {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
