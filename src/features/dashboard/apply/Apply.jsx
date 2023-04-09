@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./apply.css";
 import CitizenApply from "./CitizenApply";
 import Popup from "../../../components/popup-element/Popup";
 

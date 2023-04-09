@@ -1,4 +1,4 @@
-/* Classes */
+import "./popup.css";
 import Button from "../button-element/Button";
 import DeleteIcon from "../icons-element/DeleteIcon";
 

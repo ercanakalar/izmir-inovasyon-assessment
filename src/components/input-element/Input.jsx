@@ -7,7 +7,6 @@ const Input = (props) => {
     required,
     name,
     handleChange,
-    value,
     min,
     max,
     className,
