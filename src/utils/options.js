@@ -4,8 +4,9 @@ const cardDetails = [
   "Eşya Durumu",
   "Adet",
   "Image",
-  "Telefon",
+
   "Adres",
+  "Telefon",
 ];
 
 const esyaTipi = ["Taşınır", "Sabit"];

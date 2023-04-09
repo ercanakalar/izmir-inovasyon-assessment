@@ -4,6 +4,7 @@ import ApplyTitle from "../../../components/form-title/ApplyTitle";
 import AddItemForm from "./AddItemForm";
 import "./addItem.css";
 import ItemCard from "./item-card/ItemCard";
+import addItemPointer from "../../../utils/addItemPointer";
 
 const AddItem = (props) => {
   const [select, setSelect] = useState({
@@ -15,6 +16,8 @@ const AddItem = (props) => {
     address: "",
     phoneNumber: "",
   });
+  const [items, setItems] = useState([]);
+
   const [addItem, setAddItem] = useState(false);
   const [check, setCheck] = useState(false);
   const [sendItems, setSendItems] = useState(false);
@@ -40,15 +43,22 @@ const AddItem = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const formStyle = document.getElementsByClassName("item-form-condition")[0]
-      .style;
-    formStyle.opacity = 0.5;
-    formStyle.pointerEvents = "none";
+    addItemPointer("item-form-condition", 0.5, "none");
+
     setAddItem(true);
+    setItems((prev) => [...prev, select]);
+  };
+
+  const addItemClick = (e) => {
+    e.preventDefault();
+
+    setAddItem(!addItem);
+    addItemPointer("item-form-condition", 1, "painted");
   };
 
   const submitItems = (e) => {
     e.preventDefault();
+    setItems([]);
   };
 
   const sendItemsClick = () => {
@@ -56,7 +66,9 @@ const AddItem = (props) => {
       setSendItems(true);
       setTimeout(() => {
         setSendItems(false);
+        setItems([]);
       }, 2000);
+      addItemPointer("item-form-condition", 1, "painted");
     }
   };
 
@@ -73,6 +85,8 @@ const AddItem = (props) => {
           handleCheck={handleCheck}
           sendItemsClick={sendItemsClick}
           submitItems={submitItems}
+          addItemClick={addItemClick}
+          items={items}
         />
       </div>
       {sendItems && <div className="tostify">Başarılı!</div>}

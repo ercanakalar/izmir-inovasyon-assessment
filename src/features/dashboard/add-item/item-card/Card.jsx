@@ -25,7 +25,7 @@ const Card = (props) => {
           {Object.keys(select).map((key, index) => {
             if ((key === "img") | (key === "esyaDurumu")) return null;
             return (
-              <div className="card-details">
+              <div key={index} className="card-details">
                 <span className="card-name">{cardDetails[index]} : </span>
                 <span className="card-name-info">{select[key]} </span>
               </div>
