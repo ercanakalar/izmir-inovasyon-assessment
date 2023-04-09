@@ -5,14 +5,7 @@ import Button from "../../../../components/button-element/Button";
 import Checkbox from "../../../../components/checkbox-element/Checkbox";
 
 const ItemCard = (props) => {
-  const {
-    addItem,
-    handleCheck,
-    sendItemsClick,
-    addItemClick,
-    submitItems,
-    items,
-  } = props;
+  const { handleCheck, addItemClick, submitItems, items } = props;
 
   return (
     <div className="item-card-container">
@@ -20,17 +13,13 @@ const ItemCard = (props) => {
         <>
           <div className="cards-scroll">
             {items.map((item, index) => (
-              <Card key={index} select={item} addItem={item} />
+              <Card key={index} select={item} />
             ))}
           </div>
           <form onSubmit={submitItems} className="card-send">
-            <Checkbox
-              handleCheck={handleCheck}
-              text="Bağış Metni"
-              required={addItem}
-            />
+            <Checkbox handleCheck={handleCheck} text="Bağış Metni" required />
             <div className="card-buttons">
-              <Button onClick={sendItemsClick} className="card-button-1">
+              <Button type="submit" className="card-button-1">
                 <p className="card-button-1-text">Gönder</p>
               </Button>
               <Button onClick={addItemClick} className="card-button-2">

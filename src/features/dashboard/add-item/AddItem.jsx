@@ -18,7 +18,6 @@ const AddItem = (props) => {
   });
   const [items, setItems] = useState([]);
 
-  const [addItem, setAddItem] = useState(false);
   const [check, setCheck] = useState(false);
   const [sendItems, setSendItems] = useState(false);
 
@@ -45,45 +44,45 @@ const AddItem = (props) => {
     e.preventDefault();
     addItemPointer("item-form-condition", 0.5, "none");
 
-    setAddItem(true);
     setItems((prev) => [...prev, select]);
   };
 
   const addItemClick = (e) => {
     e.preventDefault();
 
-    setAddItem(!addItem);
     addItemPointer("item-form-condition", 1, "painted");
   };
 
   const submitItems = (e) => {
     e.preventDefault();
-    setItems([]);
-  };
-
-  const sendItemsClick = () => {
     if (check) {
       setSendItems(true);
       setTimeout(() => {
-        setSendItems(false);
         setItems([]);
       }, 2000);
       addItemPointer("item-form-condition", 1, "painted");
     }
   };
 
+  const removeImage = (e) => {
+    e.preventDefault();
+    setSelect((prev) => ({ ...prev, img: "" }));
+  };
+
   return (
     <div className="item-form">
       <ApplyTitle />
       <div className="itemForm-box-container">
-        <AddItemForm handleChange={handleChange} handleSubmit={handleSubmit} />
+        <AddItemForm
+          select={select}
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+          removeImage={removeImage}
+        />
         <Divider className="item-divider" />
 
         <ItemCard
-          select={select}
-          addItem={addItem}
           handleCheck={handleCheck}
-          sendItemsClick={sendItemsClick}
           submitItems={submitItems}
           addItemClick={addItemClick}
           items={items}

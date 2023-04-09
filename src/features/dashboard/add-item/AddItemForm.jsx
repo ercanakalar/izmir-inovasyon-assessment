@@ -9,9 +9,10 @@ import {
   esyaDurumu,
   eşyaAdet,
 } from "../../../utils/options";
+import DeleteIcon from "../../../components/icons-element/DeleteIcon";
 
 const AddItemForm = (props) => {
-  const { handleChange, handleSubmit } = props;
+  const { select, handleChange, handleSubmit, removeImage } = props;
 
   return (
     <form onSubmit={handleSubmit} className="add-item-form item-form-condition">
@@ -36,9 +37,13 @@ const AddItemForm = (props) => {
           options={esyaDurumu}
         />
         <div style={{ position: "relative" }}>
-          <label htmlFor="file-input" className="upload-image">
-            <p className="upload-text">Fotoğraf Yükle</p>
-          </label>
+          {!select.img ? (
+            <label htmlFor="file-input" className="no-image">
+              <p className="upload-text">Fotoğraf Yükle</p>
+            </label>
+          ) : (
+            <label htmlFor="file-input" className="upload-image"></label>
+          )}
           <Input
             handleChange={handleChange}
             id="file-input"
@@ -48,8 +53,13 @@ const AddItemForm = (props) => {
             accept="image/gif, image/jpeg, image/png"
             required={false}
           />
-          {/* <div className="upload-image" />
-          <p className="upload-text">Fotoğraf Yükle</p> */}
+          {select.img && (
+            <div className="card-image-delete-container">
+              <Button onClick={removeImage} className="card-image-delete">
+                <DeleteIcon />
+              </Button>
+            </div>
+          )}
         </div>
         <Select
           handleChange={handleChange}

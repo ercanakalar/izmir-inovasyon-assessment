@@ -5,7 +5,7 @@ import { cardDetails } from "../../../../utils/options";
 import "./card.css";
 
 const Card = (props) => {
-  const { select, addItem } = props;
+  const { select } = props;
 
   const renderSelect = () => {
     return (
@@ -36,7 +36,7 @@ const Card = (props) => {
     );
   };
 
-  return <>{addItem && <div className="card-content">{renderSelect()}</div>}</>;
+  return <>{<div className="card-content">{renderSelect()}</div>}</>;
 };
 
 export default Card;
