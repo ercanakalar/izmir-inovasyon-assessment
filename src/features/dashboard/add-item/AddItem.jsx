@@ -22,7 +22,6 @@ const AddItem = (props) => {
   const handleCheck = (e) => {
     setCheck(!check);
   };
-  console.log(check);
 
   const handleChange = (e) => {
     e.preventDefault();
