@@ -3,12 +3,13 @@
 
   position: relative;
   left: 2%;
+  height: 45vh;
 }
 .cards-scroll {
   overflow-y: scroll;
   scroll-behavior: smooth;
   max-height: fit-content;
-  height: 50vh;
+  height: 85%;
   width: 300px;
 }
 .cards-scroll::-webkit-scrollbar {
@@ -112,6 +113,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: auto;
   }
   .cards-scroll {
     position: relative;
@@ -139,6 +141,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: auto;
   }
   .card-send {
     position: relative;
@@ -160,6 +163,7 @@
     width: fit-content;
     justify-content: flex-start;
     flex-direction: column;
+    height: auto;
   }
   .card-send {
     position: relative;
@@ -169,6 +173,6 @@
     width: 250px;
   }
   .cards-scroll {
-    height: 50vh;
+    height: 38vh;
   }
 }
