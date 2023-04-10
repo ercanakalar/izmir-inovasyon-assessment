@@ -1,16 +1,16 @@
 .item-card-container {
   box-sizing: border-box;
-
   position: relative;
-  left: 2%;
   height: 45vh;
+  left: 20px;
 }
 .cards-scroll {
   overflow-y: scroll;
   scroll-behavior: smooth;
-  max-height: fit-content;
-  height: 85%;
+  max-height: -moz-fit-content;
   width: 300px;
+  min-height: 70px;
+  height: 410px;
 }
 .cards-scroll::-webkit-scrollbar {
   left: 10px;
@@ -27,7 +27,8 @@
 }
 
 .card-send {
-  position: absolute;
+  position: relative;
+  top: 50px;
 }
 
 .card-buttons {
@@ -38,7 +39,7 @@
 }
 .card-button-1 {
   position: relative;
-  width: 300px;
+  width: 250px;
   height: 45px;
   background: #41cb83;
   border-radius: 10px;
@@ -61,7 +62,7 @@
 }
 .card-button-2 {
   position: relative;
-  width: 300px;
+  width: 250px;
   height: 45px;
   border-radius: 10px;
   border: 2px solid #41cb83;
@@ -85,7 +86,7 @@
 .no-content-container {
   position: absolute;
   border: 2px solid;
-  top: 22%;
+  top: 40%;
   height: 242px;
   width: 300px;
 }
@@ -164,6 +165,7 @@
     justify-content: flex-start;
     flex-direction: column;
     height: auto;
+    left: 10px;
   }
   .card-send {
     position: relative;
@@ -171,8 +173,12 @@
 
   .no-content-container {
     width: 250px;
+    top: 28%;
+  }
+  .card-buttons {
+    width: 250px;
   }
   .cards-scroll {
-    height: 38vh;
+    height: 410px;
   }
 }

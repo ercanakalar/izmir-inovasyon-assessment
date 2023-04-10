@@ -60,29 +60,17 @@ const AddItem = (props) => {
 
   const addItemClick = (e) => {
     e.preventDefault();
-
-    setSelect({
-      esyaTipi: "",
-      esyaTuru: "",
-      esyaDurumu: "",
-      img: "",
-      itemCount: "",
-      address: "",
-      phoneNumber: "",
-    });
-
     addItemPointer("item-form-condition", 1, "painted");
   };
 
   const submitItems = (e) => {
     e.preventDefault();
-    if (check) {
-      setSendItems(true);
-      setTimeout(() => {
-        setItems([]);
-      }, 2000);
-      addItemPointer("item-form-condition", 1, "painted");
-    }
+    setSendItems(true);
+    setTimeout(() => {
+      setItems([]);
+      setSendItems(false);
+    }, 2000);
+    addItemPointer("item-form-condition", 1, "painted");
   };
 
   const removeImage = (e) => {
@@ -111,7 +99,6 @@ const AddItem = (props) => {
             addItemClick={addItemClick}
             items={items}
             openPopup={closePopup}
-            check={check}
           />
         </div>
         {sendItems && <div className="tostify">Başarılı!</div>}

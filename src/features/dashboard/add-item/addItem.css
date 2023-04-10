@@ -121,7 +121,7 @@
   color: #ffffff;
 }
 .tostify {
-  right: 0;
+  left: 0;
   top: 0;
   position: absolute;
   height: 35px;
@@ -133,17 +133,18 @@
   align-items: center;
   visibility: hidden;
   animation-name: animation;
-  animation-duration: 4s;
+  animation-duration: 2s;
 }
 @keyframes animation {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(0);
     visibility: visible;
   }
+
   100% {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(100px);
     visibility: visible;
   }
 }
@@ -166,8 +167,7 @@
   }
   .tostify {
     position: relative;
-    left: 77%;
-    top: -387px;
+    top: -505px;
   }
 }
 @media screen and (min-width: 600px) and (max-width: 900px) {
@@ -182,6 +182,9 @@
   }
   .item-divider {
     top: 80px;
+  }
+  .tostify {
+    top: 700px;
   }
 }
 
